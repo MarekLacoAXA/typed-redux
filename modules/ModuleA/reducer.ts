@@ -1,4 +1,4 @@
-import {Action} from "./actions";
+import {Action, ActionType} from "./actions";
 
 export const reducer = (state:Object, action:Action):Object => {
 
@@ -6,11 +6,13 @@ export const reducer = (state:Object, action:Action):Object => {
   //   return state
   // }
 
-  switch (action) {
-    case Action.SET_NAME:
+  switch (action.type) {
+    case ActionType.SET_NAME:
       return state
-    case Action.ADD_COUNT:
+    case ActionType.ADD_COUNT:
       return state
+    // case 'other':
+    //   return state
     default:
       return state
   }
